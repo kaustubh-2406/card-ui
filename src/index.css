@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-theme-dark;
+}
+
+.bg-gradient {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(46, 49, 73, 0.1) 107.43%),
+  linear-gradient(180deg, rgba(236, 240, 255, 0.1) 0%, rgba(46, 49, 73, 0) 107.43%);
+}
+
+.icon-bg-gradient {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(237, 240, 244, 0.1) 100%),
+  linear-gradient(180deg, rgba(236, 240, 255, 0.1) 0%, rgba(59, 63, 87, 0) 100%);
+}
