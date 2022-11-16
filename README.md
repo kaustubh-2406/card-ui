@@ -1,7 +1,8 @@
-## things to do..
+# Card UI - Assigment
+[deployment](https://card-ui-pearl.vercel.app/)
 
-- [x] load fonts..
+## Not done :(
 - [ ] the top curve on cards
-- [x] price container centering issue.
-- [ ] cleanup a bit..
-- [ ] popular pair, on hover show name of brand/coin
+
+## Extra Improvments
+- Add a hover state on brand logos in popular section to make it more clear and probably link them to respective cards.
