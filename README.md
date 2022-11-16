@@ -1,6 +1,6 @@
 ## things to do..
 
-- [ ] load fonts..
+- [x] load fonts..
 - [ ] the top curve on cards
 - [ ] price container centering issue.
 - [ ] cleanup a bit..
