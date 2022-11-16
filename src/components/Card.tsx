@@ -4,7 +4,9 @@ import Semicircle from './Semicircle';
 
 export const Card: React.FC<{ data: TrendingAssets }> = ({ data }) => {
 	return (
-		<div className='relative h-[350px] w-[290px] p-2 text-white bg-gradient rounded-2xl'>
+		<div
+			id={data.brand.shortName}
+			className='relative h-[350px] w-[290px] p-2 text-white bg-gradient rounded-2xl'>
 			{/* rounded semicircle... with width 125px */}
 			<div className='absolute left-1/2 top-0 w-[125px] h-[125px] transform -translate-x-1/2 -translate-y-1/2'>
 				<Semicircle size='125px' />
@@ -53,11 +55,15 @@ export const Card: React.FC<{ data: TrendingAssets }> = ({ data }) => {
 			{/* similar */}
 			<div className='w-max mt-6 mx-auto h-11 rounded-full py-2 px-4 bg-theme-dark flex justify-center items-center gap-4'>
 				{data.similar.map((item) => (
-					<img
-						key={item.shortName}
-						className={`h-full w-auto hover:scale-110`}
-						src={item.iconPath}
-					/>
+					<a
+						className='h-full w-auto '
+						href={'#' + item.shortName}
+						key={item.shortName}>
+						<img
+							className={`h-full w-auto hover:scale-110`}
+							src={item.iconPath}
+						/>
+					</a>
 				))}
 			</div>
 			<p className='pt-2 pb-8 text-center text-[#5A5F7D] text-xs font-semibold'>
