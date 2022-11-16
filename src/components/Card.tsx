@@ -16,7 +16,7 @@ export const Card: React.FC<{ data: TrendingAssets }> = ({ data }) => {
 			</div>
 
 			{/* add some spacing to top, to push content down.. */}
-			<div className='h-[50px]'></div>
+			<div className='h-[50px] grid grid-cols-6'></div>
 
 			{/* brand names */}
 			<p className='flex flex-col my-4 justify-center items-center text-[#737BAE] text-xs font-semibold'>
@@ -24,10 +24,12 @@ export const Card: React.FC<{ data: TrendingAssets }> = ({ data }) => {
 			</p>
 
 			{/* Price */}
-			<div className='h-10 rounded-full relative px-4 bg-theme-dark text-sm flex justify-center items-center'>
-				<div className='flex-1 text-base text-right'>$ {data.price}</div>
+			<div className='h-10 rounded-full relative px-4 bg-theme-dark text-sm grid grid-cols-1 place-content-center'>
+				<span className='row-start-1 col-start-1 text-base text-center'>
+					$ {data.price}
+				</span>
 				<span
-					className={`flex-1 text-xs text-right w-auto ${
+					className={`row-start-1 col-start-1 self-center text-xs text-right ${
 						data.changePercent.type === 'increase'
 							? 'text-green-600'
 							: 'text-red-600'
@@ -49,9 +51,10 @@ export const Card: React.FC<{ data: TrendingAssets }> = ({ data }) => {
 			</p>
 
 			{/* similar */}
-			<div className='mt-6 h-11 rounded-full py-2 bg-theme-dark flex justify-center items-center gap-4'>
+			<div className='w-max mt-6 mx-auto h-11 rounded-full py-2 px-4 bg-theme-dark flex justify-center items-center gap-4'>
 				{data.similar.map((item) => (
 					<img
+						key={item.shortName}
 						className={`h-full w-auto hover:scale-110`}
 						src={item.iconPath}
 					/>
